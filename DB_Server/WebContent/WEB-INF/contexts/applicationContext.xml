@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+<!-- 파일업로드를 하려면 enctype이 multipart일때 처리해주는 녀석을 등록해야함  -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/view/"/>
+	<property name="suffix" value=".jsp"/>
+</bean>   
+
+<!--  ORM 연동   -->
+<!-- spring에서 mybatis 연동  -->
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<!-- 1. jdbc 드라이버 설정 -->
+	<property name="driverClassName">
+		<value>oracle.jdbc.driver.OracleDriver</value>
+	</property>
+	
+	<property name="url">
+		<value>jdbc:oracle:thin:@localhost:1521:xe</value>
+	</property>
+	
+	<property name="username">
+		<value>yang</value>
+	</property>
+	
+	<property name="password" value="1234"/>
+</bean>
+
+
+<!-- 2. myBatis 설정 -->
+<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="configLocation">
+		<value>classpath:/mybatis-config.xml</value>
+	</property>
+</bean>
+
+<!-- 3. sqlSession 설정 -->
+<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+</bean>
+<!-- ORM 연동  -->
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+
+<bean id="AndroidGalleryWriteController" class="com.it.gallery.AndroidGalleryWriteController">
+	<constructor-arg name="galleryDaoImpl" ref="galleryDaoImpl"/>	
+</bean>
+
+<bean id="galleryWriteController" class="com.it.gallery.GalleryWriteController">
+	<constructor-arg name="galleryDaoImpl" ref="galleryDaoImpl"/>	
+</bean>
+
+<bean id="galleryListController" class="com.it.gallery.GalleryListController">
+	<constructor-arg name="galleryDaoImpl" ref="galleryDaoImpl"/>	
+</bean>
+
+<bean id="galleryViewController" class="com.it.gallery.GalleryViewController">
+	<constructor-arg name="galleryDaoImpl" ref="galleryDaoImpl"/>	
+</bean>
+
+<bean id="galleryDeleteController" class="com.it.gallery.GalleryDeleteController">
+	<constructor-arg name="galleryDaoImpl" ref="galleryDaoImpl"/>	
+</bean>
+
+<bean id="galleryUpdateController" class="com.it.gallery.GalleryUpdateController">
+	<constructor-arg name="galleryDaoImpl" ref="galleryDaoImpl"/>	
+</bean>
+
+<bean id="galleryDaoImpl" class="com.it.gallery.GalleryDaoImpl">
+	<constructor-arg ref="sqlSessionTemplate"/>
+</bean>
+
+</beans>

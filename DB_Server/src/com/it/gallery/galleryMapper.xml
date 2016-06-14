@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.it.gallery">
+	<resultMap type="com.it.gallery.GalleryVo" id="GalleryMap">
+		<result property="num" column="num"/>
+		<result property="writer" column="writer"/>
+		<result property="title" column="title"/>
+		<result property="content" column="content"/>
+		<result property="link1" column="link1"/>
+		<result property="link2" column="link2"/>
+		<result property="regDate" column="regDate"/>
+	</resultMap>
+	
+	<insert id="insertGallery" parameterType="com.it.gallery.GalleryVo">
+		insert into gallery
+		values(gallery_seq.nextval, #{writer}, #{title}, #{content}, #{link1, jdbcType=VARCHAR }, #{link2, jdbcType=VARCHAR}, sysdate)
+	</insert>
+	
+	<!-- 하나 가져오기 -->
+	<select id="selectOneGallery" resultType="com.it.gallery.GalleryVo" parameterType="Integer">
+		select * from gallery where num=#{num}
+	</select>
+	
+	<!-- 원하는 줄만 가져오기 -->
+	<select id="selectByPage" resultMap="GalleryMap" parameterType="java.util.Map">
+		<![CDATA[
+		select * from 
+		(select rownum as rnum , num, writer, title, content, link1, link2, regdate from 
+		(select * from gallery order by num desc))
+		where rnum >= #{start} and rnum <= #{end }
+		]]>
+	</select>
+	
+	<!-- 전체 목록 -->
+	<select id="selectAllGallery" resultMap="GalleryMap">
+		select * from gallery order by num desc
+	</select>
+	
+	<!-- 총 글수 구하는것 -->
+	<select id="selectCountGallery" resultType="Integer">
+		select count(*) from gallery
+	</select>
+	
+	<!-- 하나 지우기 -->
+	<delete id="deleteOneGallery" parameterType="Integer">
+		delete from gallery where num=#{num}
+	</delete>
+	
+	<update id="updateGallery" parameterType="java.util.Map">
+		update gallery set 
+		title = #{title},
+		content = #{content},
+		link1 = #{link1, jdbcType=VARCHAR },
+		link2 = #{link2, jdbcType=VARCHAR }
+		where num=#{num}
+	</update>
+	
+</mapper>

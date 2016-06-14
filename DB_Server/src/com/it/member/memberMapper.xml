@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.it.member">
+	<resultMap type="com.it.member.MemberVo" id="MemberMap">
+		<result property="id" column="id"/>
+		<result property="pass" column="pass"/>
+		<result property="name" column="name"/>
+		<result property="phone_number" column="phone_number"/>
+		<result property="gender" column="gender"/>
+
+	</resultMap>
+	
+	<insert id="insertMember" parameterType="com.it.member.MemberVo">
+		insert into member
+		values(#{id}, #{pass}, #{name}, #{phone_number}, #{gender})
+	</insert>
+	
+	<update id="passwordChange" parameterType="java.util.Map">
+		update member set pass= #{pass} where id=#{id}
+	</update>
+	
+	
+	
+	<select id="selectDBPass" resultType="String" parameterType="String">
+		select pass from member where id = #{id}
+	</select>
+	
+	
+	<select id="selectAllMember" resultMap="MemberMap">
+		select * from member
+	</select>
+	    
+	<select id="selectIdCheck" resultType="String" parameterType="String">
+		select id from member where id = #{id}
+	</select>
+	
+	<select id="selectPhoneNumberCheck" resultType="String" parameterType="String">
+		select phone_number from member where phone_number = #{phone_number}
+	</select>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete from member where id = #{id}
+	</delete>
+	
+</mapper>
