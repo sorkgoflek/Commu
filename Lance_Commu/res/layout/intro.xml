@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myfivepanelpager"
+        android:layout_width="match_parent"
+        android:layout_height="550dp" />
+
+    <Button
+            android:id="@+id/login_go__button"
+            android:layout_width="290dp"
+      	    android:layout_height="50dp"
+      	    android:layout_gravity="center"
+      	    android:textSize="30sp"
+      	    android:background="@drawable/rounded_corner"
+            android:textColor="@drawable/btn_clk_color"
+            android:textStyle="bold"
+            android:text="Commu 시작하기 >" />
+    
+</LinearLayout>

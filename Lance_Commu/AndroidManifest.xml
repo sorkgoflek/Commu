@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lance.commu.intro"   
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
+	
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.CALL_PHONE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+	<uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+	<uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/phonebook_lo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true" >
+
+        <activity
+            android:name="com.lance.commu.intro.IntroActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+	    <activity 
+	        android:name="com.lance.commu.signup.SignUpActivity" 
+	        android:screenOrientation="portrait"/> 
+		
+		<activity 
+		    android:name="com.lance.commu.imagetransfer.ImageTransferActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.friendlist.FriendListActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.friendlist.FriendList_MenuActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.login.LoginActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.fragment.FragmentMainActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.logo.LogoActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.passwordChange.PasswordChangeActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.guide.BasicGuideActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.guide.UniqueBackgroudGuideActivity" 
+		    android:screenOrientation="portrait"/>
+		
+		<activity 
+		    android:name="com.lance.commu.guide.UseGuideActivity" 
+		    android:screenOrientation="portrait"/>
+		
+    
+		<activity
+            android:name="com.lance.commu.visualtalk.VTActivity"
+            android:label="@string/app_name"
+            android:hardwareAccelerated="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name="com.lance.commu.service.PermitActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name="com.lance.commu.service.PhoneStateReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.lance.commu.service.OutgoingCallReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        
+        <service android:name="com.lance.commu.service.CommuService" />
+        
+    </application>
+
+</manifest>

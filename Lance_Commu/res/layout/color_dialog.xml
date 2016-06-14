@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/custom"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="색상을 선택해주세요"
+        android:textColor="#000000"
+        android:textSize="25px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/white"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"/>
+
+        <Button
+            android:id="@+id/yellow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#FFE400" />
+
+        <Button
+            android:id="@+id/orange"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#FFBB00" />
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#FF0000" />
+
+        <Button
+            android:id="@+id/pink"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#FF007F" />
+
+        <Button
+            android:id="@+id/pupple"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#FF00DD" />
+
+        <Button
+            android:id="@+id/sky"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#00D8FF" />
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#0100FF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_weight="0.15"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/green1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#CEF279" />
+
+        <Button
+            android:id="@+id/green2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#ABF200" />
+
+        <Button
+            android:id="@+id/green3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#009300" />
+
+        <Button
+            android:id="@+id/black1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#EAEAEA" />
+
+        <Button
+            android:id="@+id/black2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#BDBDBD" />
+
+        <Button
+            android:id="@+id/black3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#8C8C8C" />
+
+        <Button
+            android:id="@+id/black4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#4C4C4C" />
+
+        <Button
+            android:id="@+id/black5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.125"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="두께를 선택해주세요"
+        android:textColor="#000000"
+        android:textSize="25px" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content" />
+
+    <com.lance.commu.visualtalk.ColorView
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+    </com.lance.commu.visualtalk.ColorView>
+
+</LinearLayout>

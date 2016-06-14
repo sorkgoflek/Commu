@@ -1,0 +1,97 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lance.commu.visualtalk.VTActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:background="#E1E1E1" >
+
+        <ImageButton
+            android:id="@+id/on"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/pallet"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/on1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/pen"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+<!-- android:background="@drawable/pen"-->
+
+        <ImageButton
+            android:id="@+id/on2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/erase"
+            
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/on3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/camera"
+            
+            
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/on4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/exit" 
+            
+            
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="0.95"
+        android:orientation="horizontal" >
+
+        <com.lance.commu.visualtalk.MyView
+            android:id="@+id/myview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.lance.commu.visualtalk.MyView>
+    </LinearLayout>
+
+</LinearLayout>
