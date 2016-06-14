@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+     
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="45dp"
+       android:layout_marginLeft="25dp"
+       android:orientation="horizontal" >
+
+       <ImageView
+           android:layout_width="90dp"
+           android:layout_height="100dp"
+           android:layout_gravity="center"
+           android:src="@drawable/member0" />
+		
+       <LinearLayout
+            android:layout_width="fill_parent"
+      		android:layout_height="wrap_content"
+      		android:orientation="vertical">
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:textStyle="bold"
+	           android:text="양봉수"
+	           android:textSize="20dp" />
+	       
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="한성대학교 정보시스템공학과 bongp3@naver.com"
+	           android:textSize="15dp" />
+       </LinearLayout>
+       
+       
+   </LinearLayout>
+		
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="horizontal">
+
+         <ImageView
+             android:layout_width="90dp"
+             android:layout_height="90dp"
+             android:layout_gravity="center"
+             android:src="@drawable/member1" />
+         
+        <LinearLayout
+            android:layout_width="fill_parent"
+      		android:layout_height="wrap_content"
+      		android:orientation="vertical">
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:textStyle="bold"
+	           android:text="이주형"
+	           android:textSize="20dp" />
+	       
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="한성대학교 정보시스템공학과 sorkgoflek@naver.com"
+	           android:textSize="15dp" />
+       </LinearLayout>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="87dp"
+            android:layout_gravity="center"
+            android:src="@drawable/member2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+      		android:layout_height="wrap_content"
+      		android:orientation="vertical">
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:textStyle="bold"
+	           android:text="오태림"
+	           android:textSize="20dp" />
+	       
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="한성대학교 정보시스템공학과 dhxofla91@naver.com"
+	           android:textSize="15dp" />
+       </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="30dp"
+	    android:layout_marginLeft="25dp"
+	    android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:src="@drawable/member3" />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+      		android:layout_height="wrap_content"
+      		android:orientation="vertical">
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:textStyle="bold"
+	           android:text="이두리"
+	           android:textSize="20dp" />
+	       
+	       <TextView
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="한성대학교 정보시스템공학과 vduriv@naver.com"
+	           android:textSize="15dp" />
+       </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
